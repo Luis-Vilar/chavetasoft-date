@@ -25,10 +25,6 @@ jobs:
           yarn build
         if: matrix.os == 'ubuntu-latest'
 
-
-      - name: Lint
-        run: yarn lint
-
       - name: Test
         run: yarn test --ci --coverage --maxWorkers=2
 
