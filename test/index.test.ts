@@ -1,5 +1,6 @@
-import ChavetasoftDates from '../src';
 describe('unit tests', () => {
+  const  ChavetasoftDates = require ('../src/index').default;
+
   it('should throw an error when an invalid date string is passed to the constructor', () => {
     expect(() => new ChavetasoftDates('bad date string')).toThrowError(
       /invalid date/i

@@ -1,9 +1,4 @@
-class InvalidDateError extends Error {
-  constructor() {
-    super('Invalid Date');
-    this.name = 'InvalidDateError';
-  }
-}
+import InvalidDateError from './error';
 
 class ChavetasoftDates {
   private fecha: Date;
