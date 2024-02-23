@@ -11,7 +11,7 @@ To install Chavetasoft Date, you can use npm:
   npm install chavetasoft-date
   ```
 
- ## Usage
+ ## Usage in TypeScript
   
   ```typescript
 import fecha  from 'chavetasoft-date';
@@ -34,6 +34,28 @@ console.log(date.getLongDateEn()); // December 31, 2021
 
 
 ```
+## Usage in JavaScript
+  
+  ```javascript
+const  ChavetasoftDates = require("chavetasoft-date").default ;
+const fecha = new ChavetasoftDates("2021-03-01");
+
+console.log(fecha.es()); // 1/3/2021
+console.log(fecha.en()); // 3/1/2021
+console.log(fecha.getLongDateEs()); // 1 de enero de 2021
+console.log(fecha.getLongDateEn()); // January 1, 2021
+console.log(fecha.isoShortEs()); // 01-03-2021
+console.log(fecha.isoShortEn()); // 2021-03-01  
+console.log(fecha.getDay()); // 1
+console.log(fecha.getMonth()); // 3 
+console.log(fecha.getYear()); // 2021 
+console.log(fecha.getWeekDay()); // 1
+console.log(fecha.getWeekDayNameEs()); // Lunes
+console.log(fecha.getWeekDayNameEn()); // Monday
+console.log(fecha.getMonthNameEs()); // Marzo
+console.log(fecha.getMonthNameEn()); // March
+```
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
