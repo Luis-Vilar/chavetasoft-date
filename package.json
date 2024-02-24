@@ -5,8 +5,7 @@
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "engines": {
     "node": ">=18"
@@ -18,8 +17,8 @@
     "lint": "npx lint src",
     "prepare": "tsdx build",
     "size": "size-limit",
-    "play:ts": "ts-node src/test/playground.ts",
-    "play:js": "node src/test/playground.js"
+    "play:ts": "ts-node src/playground/playground.ts",
+    "play:js": "node src/playground/playground.js"
   },
   "husky": {
     "hooks": {
