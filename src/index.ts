@@ -128,4 +128,7 @@ export class ChavetasoftDates {
   getLongDateEn(): string {
     return `${this.getMonthNameEn()} ${this.fecha.getDate()}, ${this.fecha.getFullYear()}`;
   }
+  getDate(): Date {
+    return this.fecha;
+  }
 }
