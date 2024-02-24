@@ -1,5 +1,5 @@
 describe('unit tests', () => {
-  const  ChavetasoftDates = require ('../src/index').default;
+  const  {ChavetasoftDates} = require ('../index');
 
   it('should throw an error when an invalid date string is passed to the constructor', () => {
     expect(() => new ChavetasoftDates('bad date string')).toThrowError(
