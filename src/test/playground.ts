@@ -18,3 +18,4 @@ console.log(date.getMonthNameEs()); // Diciembre
 console.log(date.getMonthNameEn()); // December
 console.log(date.getLongDateEs()); // 31 de Diciembre de 2021
 console.log(date.getLongDateEn()); // December 31, 2021
+console.log(date.getDate()); // 2024-12-01T03:00:00.000Z (Date object)
