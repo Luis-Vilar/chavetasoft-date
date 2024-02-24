@@ -80,4 +80,4 @@ console.log(date.getDate()); // 2024-12-01T03:00:00.000Z (Date object)
 [Chavetasoft](https://luisvilar.netlify.app/)
 
 ## Version
-  0.1.6
+  0.1.6-2
