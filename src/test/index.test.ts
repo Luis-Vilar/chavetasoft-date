@@ -111,6 +111,10 @@ describe('unit tests', () => {
 
     expect(date).toBeInstanceOf(Date);
     expect(result).toEqual(expected);
+  });
+  it('should return one objet typeof Date when .getDate is called', () => {
+    const date = new ChavetasoftDates('2021-02-03').getDate();
+    expect(date).toBeInstanceOf(Date);
 
   });
 });
