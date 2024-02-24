@@ -5,9 +5,8 @@ export class ChavetasoftDates {
   constructor(date: string | Date) {
     if (date instanceof Date) {
       this.fecha = date;
-      return;
     }
-    if (date.includes('-')) {
+    if (typeof date === 'string' && date.includes('-')) {
       date = date.split('-').join('/');
       this.fecha = new Date(date);
     } else {
@@ -18,31 +17,8 @@ export class ChavetasoftDates {
       isNaN(this.fecha.getTime())
     ) {
       throw new InvalidDateError();
-      
     }
   }
-
-  es(): string {
-    return `${this.fecha.getDate()}/${this.fecha.getMonth() +
-      1}/${this.fecha.getFullYear()}`;
-  }
-  en(): string {
-    return `${this.fecha.getMonth() +
-      1}/${this.fecha.getDate()}/${this.fecha.getFullYear()}`;
-  }
-
-  isoShortEn(): string {
-    return this.fecha.toISOString().slice(0, 10);
-  }
-  isoShortEs(): string {
-    return this.fecha
-      .toISOString()
-      .slice(0, 10)
-      .split('-')
-      .reverse()
-      .join('/');
-  }
-
   getDay(): number {
     return this.fecha.getDate();
   }
@@ -57,6 +33,39 @@ export class ChavetasoftDates {
 
   getWeekDay(): number {
     return this.fecha.getDay();
+  }
+
+  es(): string {
+    return `${this.fecha.getDate()}/${this.fecha.getMonth() +
+      1}/${this.fecha.getFullYear()}`;
+  }
+  en(): string {
+    return `${this.fecha.getMonth() +
+      1}/${this.fecha.getDate()}/${this.fecha.getFullYear()}`;
+  }
+  pt(): string {
+    return `${this.fecha.getDate()}/${this.fecha.getMonth() +
+      1}/${this.fecha.getFullYear()}`;
+  }
+
+  isoShortEn(): string {
+    return this.fecha.toISOString().slice(0, 10);
+  }
+  isoShortEs(): string {
+    return this.fecha
+      .toISOString()
+      .slice(0, 10)
+      .split('-')
+      .reverse()
+      .join('/');
+  }
+  isoShortPt(): string {
+    return this.fecha
+      .toISOString()
+      .slice(0, 10)
+      .split('-')
+      .reverse()
+      .join('/');
   }
 
   getWeekDayNameEs(): string {
@@ -81,6 +90,18 @@ export class ChavetasoftDates {
       'Thursday',
       'Friday',
       'Saturday',
+    ];
+    return dias[this.fecha.getDay()];
+  }
+  getWeekDayNamePt(): string {
+    const dias = [
+      'Domingo',
+      'Segunda-feira',
+      'Terça-feira',
+      'Quarta-feira',
+      'Quinta-feira',
+      'Sexta-feira',
+      'Sábado',
     ];
     return dias[this.fecha.getDay()];
   }
@@ -120,6 +141,23 @@ export class ChavetasoftDates {
     ];
     return meses[this.fecha.getMonth()];
   }
+  getMonthNamePt(): string {
+    const meses = [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+      'Julho',
+      'Agosto',
+      'Setembro',
+      'Outubro',
+      'Novembro',
+      'Dezembro',
+    ];
+    return meses[this.fecha.getMonth()];
+  }
 
   getLongDateEs(): string {
     return `${this.fecha.getDate()} de ${this.getMonthNameEs()} de ${this.fecha.getFullYear()}`;
@@ -128,6 +166,10 @@ export class ChavetasoftDates {
   getLongDateEn(): string {
     return `${this.getMonthNameEn()} ${this.fecha.getDate()}, ${this.fecha.getFullYear()}`;
   }
+  getLongDatePt(): string {
+    return `${this.fecha.getDate()} de ${this.getMonthNamePt()} de ${this.fecha.getFullYear()}`;
+  }
+
   getDate(): Date {
     return this.fecha;
   }
