@@ -2,12 +2,16 @@ import InvalidDateError from './error';
 
 export class ChavetasoftDates {
   private fecha: Date;
-  constructor(fecha: string) {
-    if (fecha.includes('-')) {
-      fecha = fecha.split('-').join('/');
-      this.fecha = new Date(fecha);
+  constructor(date: string | Date) {
+    if (date instanceof Date) {
+      this.fecha = date;
+      return;
+    }
+    if (date.includes('-')) {
+      date = date.split('-').join('/');
+      this.fecha = new Date(date);
     } else {
-      this.fecha = new Date(fecha);
+      this.fecha = new Date(date);
     }
     if (this.fecha.toString() === 'Invalid Date') {
       throw new InvalidDateError();
@@ -121,5 +125,3 @@ export class ChavetasoftDates {
     return `${this.getMonthNameEn()} ${this.fecha.getDate()}, ${this.fecha.getFullYear()}`;
   }
 }
-
-

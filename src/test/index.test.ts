@@ -1,5 +1,5 @@
 describe('unit tests', () => {
-  const  {ChavetasoftDates} = require ('../index');
+  const { ChavetasoftDates } = require('../index');
 
   it('should throw an error when an invalid date string is passed to the constructor', () => {
     expect(() => new ChavetasoftDates('bad date string')).toThrowError(
@@ -102,5 +102,15 @@ describe('unit tests', () => {
     const expected = '3 de Febrero de 2021';
 
     expect(date).toBe(expected);
+  });
+  it('should return the date in one string like MM/DD/YYYY when the class is created from one typeof Date object  ', () => {
+    const date = new Date('2021/02/03');
+    const chavetasoftDate = new ChavetasoftDates(date);
+    const result = chavetasoftDate.en();
+    const expected = '2/3/2021';
+
+    expect(date).toBeInstanceOf(Date);
+    expect(result).toEqual(expected);
+
   });
 });
