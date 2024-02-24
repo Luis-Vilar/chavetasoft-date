@@ -1,6 +1,6 @@
 # Chavetasoft Dates
 
-Chavetasoft Dates is a  simple library for help with dates in different formats and languages for now Español an English. It provides methods to parse and format dates, retrieve specific date components, and get localized date strings.
+Chavetasoft Dates is a  simple library for help with dates in different formats and languages for now Español , Português and English. It provides methods to parse and format dates, retrieve specific date components, and get localized date strings.
 
 ## Installation
 
