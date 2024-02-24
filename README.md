@@ -33,7 +33,7 @@ console.log(date.getMonthNameEs()); // Diciembre
 console.log(date.getMonthNameEn()); // December
 console.log(date.getLongDateEs()); // 31 de Diciembre de 2021
 console.log(date.getLongDateEn()); // December 31, 2021
-
+console.log(date.getDate()); // 2024-12-01T03:00:00.000Z (Date object)
 
 ```
 ## Usage in JavaScript
@@ -60,6 +60,7 @@ console.log(date.getMonthNameEs()); // Diciembre
 console.log(date.getMonthNameEn()); // December
 console.log(date.getLongDateEs()); // 31 de Diciembre de 2021
 console.log(date.getLongDateEn()); // December 31, 2021
+console.log(date.getDate()); // 2024-12-01T03:00:00.000Z (Date object)
 
 
 ```
@@ -72,4 +73,4 @@ console.log(date.getLongDateEn()); // December 31, 2021
 [Chavetasoft](https://luisvilar.netlify.app/)
 
 ## Version
-  0.1.4
+  0.1.5
