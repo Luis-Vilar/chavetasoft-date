@@ -17,9 +17,10 @@
     "test": "tsdx test",
     "lint": "npx lint src",
     "prepare": "tsdx build",
-    "size": "size-limit"
+    "size": "size-limit",
+    "play:ts": "ts-node src/test/playground.ts",
+    "play:js": "node src/test/playground.js"
   },
-  "peerDependencies": {},
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -33,7 +34,7 @@
   },
   "name": "chavetasoft-date",
   "author": "Luis Vilar",
-  "module": "dist/chavetasoft-date.esm.js",
+  "module": "dist/index.js",
   "size-limit": [
     {
       "path": "dist/chavetasoft-date.cjs.production.min.js",
@@ -46,10 +47,12 @@
   ],
   "devDependencies": {
     "@size-limit/preset-small-lib": "^11.0.2",
+    "@types/node": "^20.11.20",
     "husky": "^9.0.11",
     "size-limit": "^11.0.2",
     "tsdx": "^0.14.1",
     "tslib": "^2.6.2",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "ts-node": "^10.4.0"
   }
 }
