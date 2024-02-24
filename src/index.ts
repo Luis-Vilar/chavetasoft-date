@@ -1,6 +1,6 @@
 import InvalidDateError from './error';
 
-class ChavetasoftDates {
+export class ChavetasoftDates {
   private fecha: Date;
   constructor(fecha: string) {
     if (fecha.includes('-')) {
@@ -122,4 +122,4 @@ class ChavetasoftDates {
   }
 }
 
-export default ChavetasoftDates;
+
