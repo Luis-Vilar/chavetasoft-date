@@ -13,8 +13,12 @@ export class ChavetasoftDates {
     } else {
       this.fecha = new Date(date);
     }
-    if (this.fecha.toString() === 'Invalid Date') {
+    if (
+      this.fecha.toString() === 'Invalid Date' ||
+      isNaN(this.fecha.getTime())
+    ) {
       throw new InvalidDateError();
+      
     }
   }
 
