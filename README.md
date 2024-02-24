@@ -16,7 +16,9 @@ To install Chavetasoft Date, you can use npm:
   ```typescript
 import { ChavetasoftDates } from 'chavetasoft-date';
 
-const date = new ChavetasoftDates('2024-12-1');
+var date = new ChavetasoftDates('2024-12-1'); // you can pass a string as YYYY-MM-DD
+date = new ChavetasoftDates('2024/12/1'); // you can pass a string as YYYY/MM/DD
+date = new ChavetasoftDates(new Date('2024-12-1')); // you can pass a Date object
 
 console.log(date.es()); // 31/12/2021
 console.log(date.en()); // 12/31/2021
@@ -39,9 +41,12 @@ console.log(date.getLongDateEn()); // December 31, 2021
   
   ```javascript
 
-const  { ChavetasoftDates } = require("chavetasoft-date");
+const { ChavetasoftDates } = require('../../dist/index');
 
-const  date = new ChavetasoftDates('2024-12-1');
+var date = new ChavetasoftDates('2024-12-1'); // you can pass a string as YYYY-MM-DD
+date = new ChavetasoftDates('2024/12/1'); // you can pass a string as YYYY/MM/DD
+date = new ChavetasoftDates(new Date('2024-12-1')); // you can pass a Date object
+
 console.log(date.es()); // 31/12/2021
 console.log(date.en()); // 12/31/2021
 console.log(date.isoShortEs()); // 31-12-2021
@@ -57,6 +62,7 @@ console.log(date.getMonthNameEn()); // December
 console.log(date.getLongDateEs()); // 31 de Diciembre de 2021
 console.log(date.getLongDateEn()); // December 31, 2021
 
+
 ```
 
 
@@ -67,4 +73,4 @@ console.log(date.getLongDateEn()); // December 31, 2021
 [Chavetasoft](https://luisvilar.netlify.app/)
 
 ## Version
-  0.1.3
+  0.1.4

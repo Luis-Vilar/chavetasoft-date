@@ -1,6 +1,8 @@
 import { ChavetasoftDates } from '../index';
 
-const date = new ChavetasoftDates('2024-12-1');
+var date = new ChavetasoftDates('2024-12-1'); // you can pass a string as YYYY-MM-DD
+date = new ChavetasoftDates('2024/12/1'); // you can pass a string as YYYY/MM/DD
+date = new ChavetasoftDates(new Date('2024-12-1')); // you can pass a Date object
 
 console.log(date.es()); // 31/12/2021
 console.log(date.en()); // 12/31/2021
