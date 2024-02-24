@@ -13,7 +13,7 @@ To install Chavetasoft Date, you can use npm:
  ## Usage in TypeScript
   
   ```typescript
-import { ChavetasoftDates } from '../index';
+import { ChavetasoftDates } from 'chavetasoft-date';
 
 var date = new ChavetasoftDates('2024-12-1'); // you can pass a string as YYYY-MM-DD
 date = new ChavetasoftDates('2024/12/1'); // you can pass a string as YYYY/MM/DD
@@ -44,7 +44,7 @@ console.log(date.getDate()); // 2024-12-01T03:00:00.000Z (Date object)
   
   ```javascript
 
-const { ChavetasoftDates } = require('../../dist/index');
+const { ChavetasoftDates } = require('chavetasoft-date');
 
 var date = new ChavetasoftDates('2024-12-1'); // you can pass a string as YYYY-MM-DD
 date = new ChavetasoftDates('2024/12/1'); // you can pass a string as YYYY/MM/DD
